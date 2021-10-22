@@ -1,0 +1,3 @@
+Type,Model,Speed,Range,Price
+
+PassengerJet,Boeing 777, 600.5,1000,20_000_000
