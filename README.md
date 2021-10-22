@@ -1,7 +1,7 @@
-#Jets Project
+# Jets Project
 
-##Description
+## Description
 
-##Lessons Learned
+## Lessons Learned
 
-##Technologies
+## Technologies
