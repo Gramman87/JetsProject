@@ -12,14 +12,14 @@ public abstract class Jet {
 		this.range = range;
 		this.price = price;
 	}
-	
+
 	public void fly() {
-		
+
 	}
-	
+
 	public void speedInMach(Jet jet) {
 		double mach = this.speed * 0.001303;
-		
+
 	}
 
 }
