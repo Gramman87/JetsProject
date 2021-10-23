@@ -17,7 +17,7 @@ public abstract class Jet {
 	}
 
 	public void fly() {
-		System.out.println("Look at me gooo!!!");
+		System.out.println("I am flying!");
 
 	}
 
@@ -68,7 +68,8 @@ public abstract class Jet {
 
 	@Override
 	public String toString() {
-		return "\ntype: " + type + ", model: " + model + ", speed: " + speed + ", range: " + range + ", price: " + price;
+		return "\n" + type + ", model: " + model + ", speed: " + speed + ", range: " + range + ", price: "
+				+ price;
 	}
 
 }

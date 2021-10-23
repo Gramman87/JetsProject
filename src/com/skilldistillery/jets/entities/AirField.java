@@ -52,4 +52,11 @@ public class AirField {
 		return "AirField " + fleet;
 	}
 
+	public void flyAllJets() {
+		for (Jet jet : fleet) {
+			jet.fly();
+		}
+
+	}
+
 }

@@ -13,7 +13,9 @@ public class PassengerJet extends Jet implements AutoPilot {
 		maxFlightTime = getRange() / getSpeed();
 		
 		System.out.println("I carry hundreds of passengers when I fly!");
-		System.out.println("Maximum flight time is: " + maxFlightTime);
+		System.out.print("Maximum flight time is: ");
+		System.out.printf("%.2f", maxFlightTime);
+		System.out.println(" hrs");
 
 	}
 

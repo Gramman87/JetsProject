@@ -17,15 +17,39 @@ public class AppController {
 
 		while (userPresent) {
 			printMenu();
+			System.out.print("Please select from the menu above: ");
 			userInput = scanner.nextInt();
 			scanner.nextLine();
 
 			switch (userInput) {
 			case 1:
-				airField.toString();
+				System.out.println(airField.toString());
 				break;
 			case 2:
+				airField.flyAllJets();
+				break;
+			case 3:
 
+				break;
+			case 4:
+
+				break;
+			case 5:
+
+				break;
+			case 6:
+
+				break;
+			case 7:
+
+				break;
+			case 8:
+
+				break;
+			case 9:
+				System.out.println("Have a nice day!");
+				userPresent = false;
+				break;
 			default:
 				break;
 			}
