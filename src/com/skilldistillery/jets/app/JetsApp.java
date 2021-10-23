@@ -9,7 +9,12 @@ public class JetsApp {
 	Scanner scanner = new Scanner(System.in);
 
 	public static void main(String[] args) {
+		JetsApp jetsApp = new JetsApp();
 
+	}
+	
+	public void launch() {
+		
 	}
 
 }
