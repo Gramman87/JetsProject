@@ -59,4 +59,58 @@ public class AirField {
 
 	}
 
+	public void fastestJet() {
+		double tempSpeed = 0;
+		int idx = 0;
+
+		for (int i = 0; i < fleet.size(); i++) {
+			if (fleet.get(i).getSpeed() > tempSpeed) {
+				tempSpeed = fleet.get(i).getSpeed();
+				idx = i;
+			}
+		}
+		System.out.println(fleet.get(idx));
+	}
+
+	public void longestRange() {
+		int tempRange = 0;
+		int idx = 0;
+
+		for (int i = 0; i < fleet.size(); i++) {
+			if (fleet.get(i).getRange() > tempRange) {
+				tempRange = fleet.get(i).getRange();
+				idx = i;
+			}
+		}
+		System.out.println(fleet.get(idx));
+
+	}
+
+	public void loadAllCargo() {
+		for (Jet jet : fleet) {
+			if (jet instanceof CargoJet) {
+				((CargoJet) jet).loadCargo();
+			}
+		}
+
+	}
+
+	public void allOutWar() {
+		for (Jet jet : fleet) {
+			if (jet instanceof FighterJet) {
+				((FighterJet) jet).dogFight();
+			}
+		}
+
+	}
+
+	public void breakTime() {
+		for (Jet jet : fleet) {
+			if (jet instanceof PassengerJet) {
+				((PassengerJet) jet).autoPilot();
+			}
+		}
+
+	}
+
 }

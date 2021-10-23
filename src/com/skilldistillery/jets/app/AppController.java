@@ -29,24 +29,27 @@ public class AppController {
 				airField.flyAllJets();
 				break;
 			case 3:
-
+				airField.fastestJet();
 				break;
 			case 4:
-
+				airField.longestRange();
 				break;
 			case 5:
-
+				airField.loadAllCargo();
 				break;
 			case 6:
-
+				airField.allOutWar();
 				break;
 			case 7:
-
+				airField.breakTime();
 				break;
 			case 8:
 
 				break;
 			case 9:
+
+				break;
+			case 0:
 				System.out.println("Have a nice day!");
 				userPresent = false;
 				break;
@@ -65,19 +68,21 @@ public class AppController {
 		System.out.println("|                              |");
 		System.out.println("|   2. Fly all Jets            |");
 		System.out.println("|                              |");
-		System.out.println("|   3. Display Jets by speed   |");
+		System.out.println("|   3. Fastest Jet             |");
 		System.out.println("|                              |");
-		System.out.println("|   4. Display Jets by range   |");
+		System.out.println("|   4. Jet with longest Range  |");
 		System.out.println("|                              |");
 		System.out.println("|   5. Load all Cargo Jets     |");
 		System.out.println("|                              |");
 		System.out.println("|   6. Dogfight!               |");
 		System.out.println("|                              |");
-		System.out.println("|   7. Add Jet to Fleet        |");
+		System.out.println("|   7. Time for a break        |");
 		System.out.println("|                              |");
-		System.out.println("|   8. Remove Jet from Fleet   |");
+		System.out.println("|   8. Add Jet to Fleet        |");
 		System.out.println("|                              |");
-		System.out.println("|   9. Exit                    |");
+		System.out.println("|   9. Remove Jet from Fleet   |");
+		System.out.println("|                              |");
+		System.out.println("|   10. Exit                   |");
 		System.out.println("|                              |");
 		System.out.println("================================");
 		System.out.println();

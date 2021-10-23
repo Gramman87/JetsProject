@@ -1,5 +1,7 @@
 package com.skilldistillery.jets.entities;
 
+import java.util.Objects;
+
 public abstract class Jet {
 	private String type;
 	private String model;
@@ -68,8 +70,26 @@ public abstract class Jet {
 
 	@Override
 	public String toString() {
-		return "\n" + type + ", model: " + model + ", speed: " + speed + ", range: " + range + ", price: "
-				+ price;
+		return "\n" + type + ", model: " + model + ", speed: " + speed + ", range: " + range + ", price: " + price;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(model, price, range, speed, type);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Jet other = (Jet) obj;
+		return Objects.equals(model, other.model) && price == other.price && range == other.range
+				&& Double.doubleToLongBits(speed) == Double.doubleToLongBits(other.speed)
+				&& Objects.equals(type, other.type);
 	}
 
 }
