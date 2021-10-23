@@ -1,6 +1,7 @@
 package com.skilldistillery.jets.entities;
 
 public class PassengerJet extends Jet implements AutoPilot {
+	private double maxFlightTime;
 
 	public PassengerJet(String type, String model, double speed, int range, long price) {
 		super(type, model, speed, range, price);
@@ -9,7 +10,10 @@ public class PassengerJet extends Jet implements AutoPilot {
 
 	@Override
 	public void fly() {
+		maxFlightTime = getRange() / getSpeed();
+		
 		System.out.println("I carry hundreds of passengers when I fly!");
+		System.out.println("Maximum flight time is: " + maxFlightTime);
 
 	}
 

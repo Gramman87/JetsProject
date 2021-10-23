@@ -1,6 +1,7 @@
 package com.skilldistillery.jets.entities;
 
 public class CargoJet extends Jet implements CargoCarrier {
+	private double maxFlightTime;
 
 	public CargoJet(String type, String model, double speed, int range, long price) {
 		super(type, model, speed, range, price);
@@ -9,7 +10,10 @@ public class CargoJet extends Jet implements CargoCarrier {
 
 	@Override
 	public void fly() {
+		maxFlightTime = getRange() / getSpeed();
+		
 		System.out.println("I have a large bay that can be filled with lots of cargo when I fly.");
+		System.out.println("Maximum flight time is: " + maxFlightTime);
 
 	}
 

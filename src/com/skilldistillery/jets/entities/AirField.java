@@ -19,19 +19,23 @@ public class AirField {
 			String line;
 			String[] tempStrings = new String[5];
 			fleet = new ArrayList<>();
-			
+
 			while ((line = bufIn.readLine()) != null) {
 				tempStrings = line.split(",");
-				if(tempStrings[0].equals("Passenger Jet")) {
-					PassengerJet pJet = new PassengerJet(tempStrings[0], tempStrings[1], Double.parseDouble(tempStrings[2]), Integer.parseInt(tempStrings[3]), Long.parseLong(tempStrings[4]));
+				if (tempStrings[0].equals("Passenger Jet")) {
+					PassengerJet pJet = new PassengerJet(tempStrings[0], tempStrings[1],
+							Double.parseDouble(tempStrings[2]), Integer.parseInt(tempStrings[3]),
+							Long.parseLong(tempStrings[4]));
 					fleet.add(pJet);
 				}
-				if(tempStrings[0].equals("Fighter Jet")) {
-					FighterJet fJet = new FighterJet(tempStrings[0], tempStrings[1], Double.parseDouble(tempStrings[2]), Integer.parseInt(tempStrings[3]), Long.parseLong(tempStrings[4]));
+				if (tempStrings[0].equals("Fighter Jet")) {
+					FighterJet fJet = new FighterJet(tempStrings[0], tempStrings[1], Double.parseDouble(tempStrings[2]),
+							Integer.parseInt(tempStrings[3]), Long.parseLong(tempStrings[4]));
 					fleet.add(fJet);
 				}
-				if(tempStrings[0].equals("Cargo Jet")) {
-					CargoJet cJet = new CargoJet(tempStrings[0], tempStrings[1], Double.parseDouble(tempStrings[2]), Integer.parseInt(tempStrings[3]), Long.parseLong(tempStrings[4]));
+				if (tempStrings[0].equals("Cargo Jet")) {
+					CargoJet cJet = new CargoJet(tempStrings[0], tempStrings[1], Double.parseDouble(tempStrings[2]),
+							Integer.parseInt(tempStrings[3]), Long.parseLong(tempStrings[4]));
 					fleet.add(cJet);
 				}
 
@@ -41,6 +45,11 @@ public class AirField {
 
 		}
 
+	}
+
+	@Override
+	public String toString() {
+		return "AirField " + fleet;
 	}
 
 }

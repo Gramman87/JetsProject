@@ -6,7 +6,7 @@ public abstract class Jet {
 	private double speed;
 	private int range;
 	private long price;
-	
+
 	public Jet(String type, String model, double speed, int range, long price) {
 		super();
 		this.type = type;
@@ -68,10 +68,7 @@ public abstract class Jet {
 
 	@Override
 	public String toString() {
-		return "Jet [type: " + type + ", model: " + model + ", speed: " + speed + ", range: " + range + ", price: " + price
-				+ "]";
+		return "\ntype: " + type + ", model: " + model + ", speed: " + speed + ", range: " + range + ", price: " + price;
 	}
-	
-	
 
 }
