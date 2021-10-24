@@ -69,24 +69,17 @@ public class AirField {
 		System.out.println(fleet.toString());
 
 	}
-
-	public void removeJet() {
-		String deleteModel = null;
-		int idx = 0;
+	
+	public void removeMenu() {
 		
-		for (Jet jet : fleet) {
-			System.out.println(jet.getModel());
+		for(int i = 0; i < fleet.size(); i++) {
+			System.out.println(i + ": " + fleet.get(i).toString());
 		}
-		System.out.print("Please enter the model of the jet you would like to delete: ");
-		deleteModel = scanner.nextLine();
 		
-		for (int i = 0; i < fleet.size(); i++) {
-			if(fleet.get(i).getModel().equalsIgnoreCase(deleteModel)) {
-				idx = i;
-			}
-		}
-		fleet.remove(idx);
-
+		System.out.print("Enter the number of the jet to remove: ");
+		int userRemove = scanner.nextInt();
+		System.out.println(fleet.remove(userRemove) + " has been removed.");
+		
 	}
 
 	@Override

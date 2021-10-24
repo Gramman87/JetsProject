@@ -49,7 +49,7 @@ public class AppController {
 				addMenu();
 				break;
 			case 9:
-				removeMenu();
+				airField.removeMenu();
 				break;
 			case 0:
 				System.out.println("Have a nice day!");
@@ -125,8 +125,4 @@ public class AppController {
 		}
 	}
 
-	public void removeMenu() {
-		airField.removeJet();
-		
-	}
 }

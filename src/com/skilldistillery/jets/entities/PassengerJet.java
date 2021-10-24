@@ -14,7 +14,7 @@ public class PassengerJet extends Jet implements AutoPilot {
 	public void fly() {
 		maxFlightTime = getRange() / getSpeed();
 
-		System.out.println("I carry hundreds of passengers when I fly!");
+		System.out.println("I am a passenger Jet!");
 		System.out.print("Maximum flight time is: ");
 		System.out.printf("%.2f", maxFlightTime);
 		System.out.println(" hrs");
@@ -44,6 +44,7 @@ public class PassengerJet extends Jet implements AutoPilot {
 
 	@Override
 	public void autoPilot() {
+		System.out.println("Auto Pilot: ON!");
 		System.out.println("Time to kick back and sip some coffee!");
 		System.out.println();
 
