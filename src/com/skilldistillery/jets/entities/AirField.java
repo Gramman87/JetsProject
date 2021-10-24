@@ -49,30 +49,22 @@ public class AirField {
 
 	}
 
-	public void addJet() {
-		final String type;
-		final String model;
-		final double speed;
-		final int range;
-		final long price;
-
-		System.out.print("Please enter the Jet type (Passanger, Fighter, Cargo): ");
-		type = scanner.nextLine();
-		System.out.print("Please enter the Jet model: ");
-		model = scanner.nextLine();
-		System.out.print("Please enter the Jet speed(mph): ");
-		speed = scanner.nextDouble();
+	public void addJet(String jetType) {
+		System.out.println("Please enter the model: ");
+		final String model = scanner.nextLine();
+		System.out.println("Please enter the top speed: ");
+		final double speed = scanner.nextDouble();
 		scanner.nextLine();
-		System.out.print("Please enter the Jet range: ");
-		range = scanner.nextInt();
+		System.out.println("Please enter the max range: ");
+		final int range = scanner.nextInt();
 		scanner.nextLine();
-		System.out.print("Please enter the Jet price: ");
-		price = scanner.nextLong();
+		System.out.println("Please enter the price: ");
+		final long price = scanner.nextLong();
 		scanner.nextLine();
 
-		Jet nJet = new Jet(type, model, speed, range, price) {
+		Jet nJet = new Jet(jetType, model, speed, range, price) {
 		};
-		
+
 		fleet.add(nJet);
 		System.out.println(fleet.toString());
 

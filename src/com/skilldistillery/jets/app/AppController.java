@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import com.skilldistillery.jets.entities.AirField;
 import com.skilldistillery.jets.entities.Jet;
+import com.skilldistillery.jets.entities.PassengerJet;
 
 public class AppController {
 	Scanner scanner = new Scanner(System.in);
@@ -45,16 +46,14 @@ public class AppController {
 				airField.breakTime();
 				break;
 			case 8:
-				airField.addJet();
+				subMenu();
 				break;
 			case 9:
-//				airField.removeJet();
+				airField.removeJet();
 				break;
 			case 0:
 				System.out.println("Have a nice day!");
 				userPresent = false;
-				break;
-			default:
 				break;
 			}
 		}
@@ -88,5 +87,41 @@ public class AppController {
 		System.out.println("================================");
 		System.out.println();
 
+	}
+
+	public void subMenu() {
+
+		System.out.println();
+		System.out.println("========= MENU =========");
+		System.out.println("|                      |");
+		System.out.println("|    A. Passenger      |");
+		System.out.println("|                      |");
+		System.out.println("|    B. Fighter        |");
+		System.out.println("|                      |");
+		System.out.println("|    C. Cargo          |");
+		System.out.println("|                      |");
+		System.out.println("========================");
+		System.out.println();
+		System.out.print("Please select your jet type: ");
+
+		String subInput = scanner.next();
+		scanner.nextLine();
+		switch (subInput) {
+		case "A":
+		case "a":
+			airField.addJet("Passenger Jet");
+			break;
+		case "B":
+		case "b":
+			airField.addJet("Fighter Jet");
+			break;
+		case "C":
+		case "c":
+			airField.addJet("Cargo Jet");
+			break;
+		default:
+			System.out.println("Please enter a valid type.");
+			break;
+		}
 	}
 }
