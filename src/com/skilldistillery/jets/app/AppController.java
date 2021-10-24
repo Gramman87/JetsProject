@@ -3,6 +3,7 @@ package com.skilldistillery.jets.app;
 import java.util.Scanner;
 
 import com.skilldistillery.jets.entities.AirField;
+import com.skilldistillery.jets.entities.Jet;
 
 public class AppController {
 	Scanner scanner = new Scanner(System.in);
@@ -44,10 +45,10 @@ public class AppController {
 				airField.breakTime();
 				break;
 			case 8:
-
+				airField.addJet();
 				break;
 			case 9:
-
+//				airField.removeJet();
 				break;
 			case 0:
 				System.out.println("Have a nice day!");
@@ -82,7 +83,7 @@ public class AppController {
 		System.out.println("|                              |");
 		System.out.println("|   9. Remove Jet from Fleet   |");
 		System.out.println("|                              |");
-		System.out.println("|   10. Exit                   |");
+		System.out.println("|   0. Exit                    |");
 		System.out.println("|                              |");
 		System.out.println("================================");
 		System.out.println();

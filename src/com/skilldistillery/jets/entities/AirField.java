@@ -5,8 +5,10 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class AirField {
+	Scanner scanner = new Scanner(System.in);
 	private List<Jet> fleet;
 
 	public AirField() {
@@ -44,6 +46,35 @@ public class AirField {
 			System.err.println(e);
 
 		}
+
+	}
+
+	public void addJet() {
+		final String type;
+		final String model;
+		final double speed;
+		final int range;
+		final long price;
+
+		System.out.print("Please enter the Jet type (Passanger, Fighter, Cargo): ");
+		type = scanner.nextLine();
+		System.out.print("Please enter the Jet model: ");
+		model = scanner.nextLine();
+		System.out.print("Please enter the Jet speed(mph): ");
+		speed = scanner.nextDouble();
+		scanner.nextLine();
+		System.out.print("Please enter the Jet range: ");
+		range = scanner.nextInt();
+		scanner.nextLine();
+		System.out.print("Please enter the Jet price: ");
+		price = scanner.nextLong();
+		scanner.nextLine();
+
+		Jet nJet = new Jet(type, model, speed, range, price) {
+		};
+		
+		fleet.add(nJet);
+		System.out.println(fleet.toString());
 
 	}
 
