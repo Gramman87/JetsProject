@@ -14,7 +14,7 @@ public class FighterJet extends Jet implements CombatReady {
 	public void fly() {
 		maxFlightTime = getRange() / getSpeed();
 
-		System.out.println("I am a fighter Jet!");
+		System.out.println("I am a " + getModel() + " fighter Jet!");
 		System.out.print("Maximum flight time is: ");
 		System.out.printf("%.2f", maxFlightTime);
 		System.out.println(" hrs");

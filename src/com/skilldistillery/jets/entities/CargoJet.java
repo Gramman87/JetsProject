@@ -14,7 +14,7 @@ public class CargoJet extends Jet implements CargoCarrier {
 	public void fly() {
 		maxFlightTime = getRange() / getSpeed();
 
-		System.out.println("I am a cargo Jet!");
+		System.out.println("I am a " + getModel() + " cargo Jet!");
 		System.out.print("Maximum flight time is: ");
 		System.out.printf("%.2f", maxFlightTime);
 		System.out.println(" hrs");

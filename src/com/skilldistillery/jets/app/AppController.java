@@ -26,7 +26,7 @@ public class AppController {
 				System.out.println(airField.toString());
 				break;
 			case 2:
-				airField.flyAllJets();
+				airField.flyJetsMenu();
 				break;
 			case 3:
 				airField.fastestJet();
@@ -44,7 +44,7 @@ public class AppController {
 				airField.breakTime();
 				break;
 			case 8:
-				addMenu();
+				airField.addMenu();
 				break;
 			case 9:
 				airField.removeMenu();
@@ -65,7 +65,7 @@ public class AppController {
 		System.out.println("|                              |");
 		System.out.println("|   1. List Fleet              |");
 		System.out.println("|                              |");
-		System.out.println("|   2. Fly all Jets            |");
+		System.out.println("|   2. Fly Jets                |");
 		System.out.println("|                              |");
 		System.out.println("|   3. Fastest Jet             |");
 		System.out.println("|                              |");
@@ -86,42 +86,6 @@ public class AppController {
 		System.out.println("================================");
 		System.out.println();
 
-	}
-
-	public void addMenu() {
-
-		System.out.println();
-		System.out.println("========= MENU =========");
-		System.out.println("|                      |");
-		System.out.println("|    A. Passenger      |");
-		System.out.println("|                      |");
-		System.out.println("|    B. Fighter        |");
-		System.out.println("|                      |");
-		System.out.println("|    C. Cargo          |");
-		System.out.println("|                      |");
-		System.out.println("========================");
-		System.out.println();
-		System.out.print("Please select your jet type: ");
-
-		String subInput = scanner.next();
-		scanner.nextLine();
-		switch (subInput) {
-		case "A":
-		case "a":
-			airField.addJet("Passenger Jet");
-			break;
-		case "B":
-		case "b":
-			airField.addJet("Fighter Jet");
-			break;
-		case "C":
-		case "c":
-			airField.addJet("Cargo Jet");
-			break;
-		default:
-			System.out.println("Please enter a valid type.");
-			break;
-		}
 	}
 
 }
