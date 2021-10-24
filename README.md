@@ -13,4 +13,4 @@ UI is a simple terminal style multiple choice but available actions included cal
 This is the first project I took the time before starting to develop my own UML diagram to guide my coding. This made a huge difference in how I approached building my classes and writing out my different methods. I felt very comfortable and confident moving through the steps of the build out rather than being shaken by unexpected compile issues or exceptions thrown. When these things happened it was more rare and more quickly overcome as well.
 
 ## Technologies
-Java, Eclipse, Git, GitHub, Markdown, Unix Shell
+Java, Eclipse, Atom, Git, GitHub, Markdown, Unix Shell
