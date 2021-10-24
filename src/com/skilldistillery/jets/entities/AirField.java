@@ -69,9 +69,9 @@ public class AirField {
 		System.out.println(fleet.toString());
 
 	}
-	
+
 //	Remove by number selection from menu.
-	
+
 //	public void removeMenu() {
 //		
 //		for(int i = 0; i < fleet.size(); i++) {
@@ -82,26 +82,27 @@ public class AirField {
 //		int userRemove = scanner.nextInt();
 //		System.out.println(fleet.remove(userRemove) + " has been removed.");
 //		
+//		scanner.close();
 //	}
 
 //	Remmove by model name entry.
-	
+
 	public void removeMenu() {
 		String deleteModel = null;
 		int idx = 0;
-		
+
 		for (Jet jet : fleet) {
 			System.out.println(jet.getModel());
 		}
 		System.out.print("Please enter the model of the jet you would like to delete: ");
 		deleteModel = scanner.nextLine();
-		
+
 		for (int i = 0; i < fleet.size(); i++) {
-			if(fleet.get(i).getModel().equalsIgnoreCase(deleteModel)) {
+			if (fleet.get(i).getModel().equalsIgnoreCase(deleteModel)) {
 				idx = i;
 			}
 		}
-		fleet.remove(idx);
+		System.out.println(fleet.remove(idx) + " has been removed.");
 
 	}
 

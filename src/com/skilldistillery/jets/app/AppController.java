@@ -55,6 +55,7 @@ public class AppController {
 				break;
 			}
 		}
+		scanner.close();
 	}
 
 	public void printMenu() {
