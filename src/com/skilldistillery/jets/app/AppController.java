@@ -46,10 +46,10 @@ public class AppController {
 				airField.breakTime();
 				break;
 			case 8:
-				subMenu();
+				addMenu();
 				break;
 			case 9:
-				airField.removeJet();
+				removeMenu();
 				break;
 			case 0:
 				System.out.println("Have a nice day!");
@@ -89,7 +89,7 @@ public class AppController {
 
 	}
 
-	public void subMenu() {
+	public void addMenu() {
 
 		System.out.println();
 		System.out.println("========= MENU =========");
@@ -123,5 +123,10 @@ public class AppController {
 			System.out.println("Please enter a valid type.");
 			break;
 		}
+	}
+
+	public void removeMenu() {
+		airField.removeJet();
+		
 	}
 }

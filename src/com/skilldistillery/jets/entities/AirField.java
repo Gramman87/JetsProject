@@ -70,6 +70,25 @@ public class AirField {
 
 	}
 
+	public void removeJet() {
+		String deleteModel = null;
+		int idx = 0;
+		
+		for (Jet jet : fleet) {
+			System.out.println(jet.getModel());
+		}
+		System.out.print("Please enter the model of the jet you would like to delete: ");
+		deleteModel = scanner.nextLine();
+		
+		for (int i = 0; i < fleet.size(); i++) {
+			if(fleet.get(i).getModel().equalsIgnoreCase(deleteModel)) {
+				idx = i;
+			}
+		}
+		fleet.remove(idx);
+
+	}
+
 	@Override
 	public String toString() {
 		return "AirField " + fleet;
