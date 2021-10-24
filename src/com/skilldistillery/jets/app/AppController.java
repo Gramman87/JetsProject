@@ -3,8 +3,6 @@ package com.skilldistillery.jets.app;
 import java.util.Scanner;
 
 import com.skilldistillery.jets.entities.AirField;
-import com.skilldistillery.jets.entities.Jet;
-import com.skilldistillery.jets.entities.PassengerJet;
 
 public class AppController {
 	Scanner scanner = new Scanner(System.in);

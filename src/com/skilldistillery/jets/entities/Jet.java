@@ -22,11 +22,6 @@ public abstract class Jet {
 
 	}
 
-	public void speedInMach(Jet jet) {
-		double mach = this.speed * 0.001303;
-
-	}
-
 	public String getType() {
 		return type;
 	}
