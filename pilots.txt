@@ -1,0 +1,6 @@
+Bob,Claw,56,Pilot,0001
+Linda,Summers,47,Captain,0010
+Kelly,O'Shea,35,Pilot,0100
+Danny,Potson,42,Pilot,1000
+Val,Maverick,35,Captain,0011
+Tom,Killmer,40,CapTain,0110

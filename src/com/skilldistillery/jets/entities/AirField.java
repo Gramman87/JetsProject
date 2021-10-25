@@ -12,6 +12,7 @@ import javax.print.attribute.standard.PrinterInfo;
 public class AirField {
 	Scanner scanner = new Scanner(System.in);
 	private List<Jet> fleet;
+	private List<Pilot> crew;
 
 	public AirField() {
 
@@ -41,6 +42,34 @@ public class AirField {
 					CargoJet cJet = new CargoJet(tempStrings[0], tempStrings[1], Double.parseDouble(tempStrings[2]),
 							Integer.parseInt(tempStrings[3]), Long.parseLong(tempStrings[4]));
 					fleet.add(cJet);
+				}
+
+			}
+		} catch (IOException e) {
+			System.err.println(e);
+
+		}
+
+	}
+
+	public void populateCrew() {
+
+		try (BufferedReader bufIn = new BufferedReader(new FileReader("pilots.txt"))) {
+			String line;
+			String[] tempStrings = new String[5];
+			crew = new ArrayList<>();
+
+			while ((line = bufIn.readLine()) != null) {
+				tempStrings = line.split(",");
+				if (tempStrings[0].equals("Captain")) {
+					Pilot captain = new Pilot (tempStrings[0], tempStrings[1], Integer.parseInt(tempStrings[2]),
+							tempStrings[3], Integer.parseInt(tempStrings[4]));
+					crew.add(captain);
+				}
+				if (tempStrings[0].equals("Pilot")) {
+					Pilot pilot = new Pilot (tempStrings[0], tempStrings[1], Integer.parseInt(tempStrings[2]),
+							tempStrings[3], Integer.parseInt(tempStrings[4]));
+					crew.add(pilot);
 				}
 
 			}

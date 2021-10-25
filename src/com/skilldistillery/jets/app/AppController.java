@@ -14,6 +14,7 @@ public class AppController {
 
 		System.out.println("Good morning. Welcome to your airfield!");
 		airField.populateAirField();
+		airField.populateCrew();
 
 		while (userPresent) {
 			printMenu();
