@@ -7,8 +7,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import javax.print.attribute.standard.PrinterInfo;
-
 public class AirField {
 	Scanner scanner = new Scanner(System.in);
 	private List<Jet> fleet;
@@ -62,12 +60,12 @@ public class AirField {
 			while ((line = bufIn.readLine()) != null) {
 				tempStrings = line.split(",");
 				if (tempStrings[0].equals("Captain")) {
-					Pilot captain = new Pilot (tempStrings[0], tempStrings[1], Integer.parseInt(tempStrings[2]),
+					Pilot captain = new Pilot(tempStrings[0], tempStrings[1], Integer.parseInt(tempStrings[2]),
 							tempStrings[3], Integer.parseInt(tempStrings[4]));
 					crew.add(captain);
 				}
 				if (tempStrings[0].equals("Pilot")) {
-					Pilot pilot = new Pilot (tempStrings[0], tempStrings[1], Integer.parseInt(tempStrings[2]),
+					Pilot pilot = new Pilot(tempStrings[0], tempStrings[1], Integer.parseInt(tempStrings[2]),
 							tempStrings[3], Integer.parseInt(tempStrings[4]));
 					crew.add(pilot);
 				}
